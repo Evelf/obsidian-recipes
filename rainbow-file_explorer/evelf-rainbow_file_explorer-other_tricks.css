@@ -1,0 +1,24 @@
+
+/* This change the color and size of the file type label for non-md files ("JPEG", "PNG", ..) */
+.nav-file-tag {
+  color: var(--interactive-accent);
+  font-size: 7px;
+  margin: 0;
+}
+
+
+/* Top navbar: more compact */
+.nav-header {
+  padding: 0;
+}
+/* Top navbar: smaller buttons */
+.nav-header .nav-buttons-container .nav-action-button svg {
+  width: 15px;
+  height: 15px;
+}
+/* Top navbar: Squeaze buttons a little bit */
+.nav-header .nav-buttons-container .nav-action-button {
+  margin: 0 3px;
+  padding: 0;
+}
+

@@ -1,0 +1,36 @@
+/* align the collapse indicator (triangle)
+ * with the folders' left border
+ */
+.nav-folder-collapse-indicator {
+  margin: 0;
+  height: 10px;
+  width: 10px;
+  align-self: center;
+}
+
+/* align the folders' name with their border */
+.nav-folder-title {
+  padding-left: 0;
+}
+
+/* various adjustments */
+.nav-folder-children {
+  padding-left: 3px;
+}
+.nav-folder-children .nav-folder-children {
+  margin-left: 4px;
+}
+.nav-file-title {
+  padding-left: 0;
+  line-height: 1;
+}
+.nav-folder {
+  margin-left: 2px;
+}
+.nav-folder-title-content {
+  padding: 0 0 2px 2px;
+  line-height: 1;
+}
+.nav-file-title-content {
+  padding: 0;
+}
