@@ -1,0 +1,96 @@
+
+/** Layout */
+
+.outline .tree-item {
+  padding: 0;
+  margin: 3px 0 9px 3px;
+}
+.outline .tree-item.is-collapsed {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+.outline .tree-item-self {
+  padding: 2px 6px 2px 0;
+}
+.outline .tree-item-children {
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  margin: 0;
+  padding: 0 0 0 6px;
+}
+.outline .tree-item .collapse-icon {
+  height: 10px;
+  padding: 0;
+  margin: 0 -3px 0 -3px ;
+}
+.outline .tree-item .tree-item-inner {
+  line-height: 0.9;
+  margin: 0;
+  padding: 2px 0;
+}
+
+
+/** Colors */
+
+.outline .tree-item,
+.outline .tree-item .tree-item-inner,
+.outline .tree-item .collapse-icon {
+  color: var(--rainbow-color-1);
+}
+.outline .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-1);
+}
+
+.outline .tree-item .tree-item,
+.outline .tree-item .tree-item .tree-item-inner,
+.outline .tree-item .tree-item .collapse-icon {
+  color: var(--rainbow-color-2);
+}
+.outline .tree-item .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-2);
+}
+
+.outline .tree-item .tree-item .tree-item,
+.outline .tree-item .tree-item .tree-item .tree-item-inner,
+.outline .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--rainbow-color-3);
+}
+.outline .tree-item .tree-item .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-3);
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
+.outline .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--rainbow-color-4);
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-4);
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--rainbow-color-5);
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-5);
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--rainbow-color-6);
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-self {
+  border-color: var(--rainbow-color-6);
+}
+
+.outline {
+  margin-left: -7px;
+}
+
+
+
+
+
