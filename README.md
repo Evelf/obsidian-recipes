@@ -2,6 +2,10 @@
 
 ## 2022-08-28 Rainbow file explorer
 
+### Screenshot
+
+![Screenshot Outline](rainbow-file_explorer/demo-screenshot-outline.png)
+
 ### Bases
 
 - Theme: Obsidian's Base theme, dark mode
