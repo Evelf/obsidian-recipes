@@ -1,0 +1,66 @@
+:root {
+  --grammar-card-color: #72D370;
+}
+
+
+/*************************************************
+ * Styles pour tous les éléments embed
+ * dans une page ou bien au survol d'un lien
+ *************************************************/
+/* On cache le nom du fichier */
+.markdown-embed-title {
+  display: none;
+}
+/* Pour l'icone "lien" en haut à gauche :
+   hover de couleur neutre */
+.markdown-embed-link:hover, .file-embed-link:hover {
+  color: var(--text-normal);
+}
+
+
+
+/*************************************************
+ * callout qui se cachent lorsqu'ils sont embedded
+ *  classe CSS : shy
+ *************************************************/
+div.callout[data-callout="shy"] {
+  border-width: 0;
+}
+.markdown-embed div[data-callout="shy"] {
+  display: none;
+}
+
+
+
+
+
+/*************************************************
+ * Styles pour toutes les cartes, classe CSS
+ *  card-note
+ *************************************************/
+.markdown-embed div.card-note {
+  border: 2px solid var(--text-muted);
+  border-radius: 10px;
+}
+.markdown-embed .card-note > div > div:nth-last-child(2) > p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/*************************************************
+ * Couleurs pour les cartes avec classe CSS
+ *  grammar-card
+ *************************************************/
+.markdown-embed div.korean-grammar {
+  border-color: var(--grammar-card-color);
+}
+.korean-grammar mark,
+.korean-grammar span.cm-highlight {
+  background-color: transparent;
+  color: var(--grammar-card-color);
+}
+/* This requires "Supercharged Links" plugin, but it
+   override the values so the colors match exactly */
+a[data-link-note_type*="korean_grammar_card"  i] {
+    color: var(--grammar-card-color) !important;
+}
