@@ -1,0 +1,180 @@
+/************************************************
+ * CSS perso toute sale
+ * customise sliding panes (entre autres choses)
+ ************************************************/
+
+
+
+
+a.external-link {
+	color: var(--rainbow-color-2);
+}
+
+a {
+  color: #7f6df2; /* text accent - plus doux que --rainbow-color-1 */
+}
+a:hover {
+  color: #8875ff; /* text accent over */
+}
+
+
+
+
+/* J'aime pas les listes et les paragraphes gros-pavés :( */
+p, ul {
+  margin-block-start: 1em;
+  margin-block-start: 0;
+  margin-block-end: 1em;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+ul {
+  padding-inline-start: 40px;
+}
+p + p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+/* Moins d'espace en haut des fichiers */
+.markdown-rendered h1 {
+  margin: 0 0 15px;
+}
+/* Encore moins d'espace (mode visualisation)
+.markdown-reading-view .markdown-preview-view {
+  padding: 0 10px;
+}
+/* Réduire l'espace à gauche et en haut gauche (mode édition)
+ * défaut = 20px partout */
+.markdown-source-view.mod-cm6 .cm-scroller {
+  padding: 0 10px 20px 0;
+}
+
+/* Pour des tables plus compactes */
+.markdown-rendered th, .markdown-rendered td {
+  padding: 4px;
+}
+
+/* J'aime bien quand les résultats de dataview sont centrés */
+.dataview.table-view-table > tbody > tr > td, .dataview.table-view-table > thead > tr > th {
+  text-align: center;
+}
+
+/* Pour que la boite du titre de callout soit moins grosse
+ * défaut = padding: 10px */
+.callout-title {
+  padding: 0.2em 0.5em;
+}
+/* Pour que les titres des callouts ne soient pas en gras */
+.callout-title-inner {
+  font-weight: normal;
+}
+/* Pour réduire l'écartement entre 2 callouts */
+.callout {
+  margin: 1em 0;
+  margin: 0.5em 0 0.2em;
+}
+/* Pour réduire le padding vertical du contenu
+ * défaut = padding: 5px 15px; */
+.callout-content {
+  padding: 0 0 0 15px;
+}
+
+/* Pour que les numéros de ligne soient petits (mode édition) */
+.markdown-source-view.mod-cm6 .cm-gutters {
+  font-size: 9px;
+  padding-right: 0;
+}
+/* Pour réduire encore plus la bordure de gauche (mode édition)
+ * défaut = 10px */
+.markdown-source-view.mod-cm6.is-folding .cm-contentContainer {
+  padding-left: 0;
+}
+
+/* pour réduire un peu toutes les bordures (mode pré-visualisation)
+ * défaut = 15px 30px */
+.markdown-preview-view {
+  padding: 5px 10px;
+}
+
+/* bordures des panes */
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header {
+  border-right: none;
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split.mod-active > .workspace-leaf-content > .view-header {
+  border-left: 1px solid var(--interactive-accent);
+  border-right: none;
+  background: linear-gradient(to right, var(--interactive-accent) -150%, var(--background-primary) 90%);
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split.mod-active > .workspace-leaf-content > .view-header {
+  border-right: none !important;
+}
+/* Couleur de l'icone du fichier actif */
+.workspace-leaf.mod-active .view-header path {
+  fill: var(--interactive-accent);
+}
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+  background-image: none !important;
+}
+
+
+.app-container .status-bar {
+  align-self: center;
+  justify-content: center;
+  padding: 0;
+  background-color: var(--background-secondary-alt);
+  width: 100%;
+}
+.app-container .status-bar .status-bar-item {
+  padding: 0 8px;
+}
+.app-container .status-bar .plugin-theme-picker {
+  padding: 0;
+}
+.app-container .status-bar .plugin-theme-picker .status-bar-item {
+  padding-right: 3px;
+}
+.app-container .status-bar .plugin-theme-picker div.status-bar-item + div.status-bar-item {
+  padding-left: 0;
+  padding-right: 8px;
+}
+.app-container .status-bar .plugin-obsidian-show-file-path {
+  font-size: 12px;
+}
+.app-container .status-bar .plugin-word-count .status-bar-item-segment {
+  width: 150px;
+  text-align: right;
+}
+
+/**
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content > .view-header {
+  left: auto;
+  right: 0;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-split > .workspace-leaf-content {
+    padding-left: 0;
+}
+*/
+
+.theme-dark {
+    --text-highlight-bg: #db8c32;
+    --text-highlight-bg: #ba690d;
+}
+
+.couleur-de-fond {
+  background-color: #2a3135;
+}
+.couleur-des-liens {
+  color: #7f6df2;
+}
+
+mark.hltr-4-vert, .markdown-preview-view mark.hltr-4-ver {
+/**  background-color: inherit !important;
+  color: #31c48d; */
+}
+
