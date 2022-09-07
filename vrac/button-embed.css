@@ -1,0 +1,49 @@
+.markdown-embed-content button.hide-embeded, button.show-embeded {
+  display: none;
+}
+.markdown-embed-content button.show-embeded {
+  visibility: visible;
+  display: inline;
+}
+
+button.pretty-button {
+    border: 0.5px solid #7f6df2;
+    color: #7f6df2;
+    font-size: var(--button-size);
+    margin: 0 5px;
+}
+
+button.pretty-button:hover {
+    border-color: #3AB1C4;
+    color: #3AB1C4;
+}
+
+button.spaced {
+  margin: 40px;
+}
+
+.task-progression progress {
+  width: 70%;
+  margin-left: 1em;
+  height: 27px;
+}
+
+progress.toto {
+  border-radius: 7px;
+  width: 80%;
+  height: 22px;
+  margin-left: -11.5%;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+progress.toto::-webkit-progress-bar {
+  background-color: yellow;
+  border-radius: 7px;
+}
+progress.toto::-webkit-progress-value {
+  background-color: blue;
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );
+}
+progress.toto::-moz-progress-bar {
+  /* style rules */
+}
