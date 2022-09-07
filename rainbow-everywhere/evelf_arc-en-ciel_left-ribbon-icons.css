@@ -1,0 +1,117 @@
+/* @settings
+
+name: "'Arc-en-Ciel' for left ribbon action icons"
+id: evelf-aec-left-ribbon-icons
+settings:
+    -
+        id: aec-left-ribbon-icons-colors
+        title: Custom rainbow colors choices
+        type: heading
+        description: Define your own colors!
+        collapsed: true
+        level: 1
+    -
+        id: aec-left-ribbon-icons-color-1
+        title: First Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7f6df2'
+        default-light: '#7f6df2'
+    -
+        id: aec-left-ribbon-icons-color-2
+        title: Second Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3AB1C4'
+        default-light: '#3AB1C4'
+    -
+        id: aec-left-ribbon-icons-color-3
+        title: Third Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6DC43A'
+        default-light: '#6DC43A'
+    -
+        id: aec-left-ribbon-icons-color-4
+        title: Fourth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C4913A'
+        default-light: '#C4913A'
+    -
+        id: aec-left-ribbon-icons-color-5
+        title: Fifth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C43A6D'
+        default-light: '#C43A6D'
+    -
+        id: aec-left-ribbon-icons-color-6
+        title: Sixth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#913AC4'
+        default-light: '#913AC4'
+    -
+        id: aec-left-ribbon-icons-theme-colors
+        title: Get colors from theme
+        type: heading
+        description: Ignore custom colors
+        collapsed: true
+        level: 1
+    -
+        id: aec-left-ribbon-icons-from-theme
+        title: Tries to get colors from h1->h2 titles
+        description: (Depending on your theme, this may not work)
+        type: class-toggle
+        default: false
+
+*/
+
+
+/** Colors */
+
+:root {
+  --aec-left-ribbon-icons-color-1: #7f6df2;
+  --aec-left-ribbon-icons-color-2: #3ab1c4;
+  --aec-left-ribbon-icons-color-3: #6dc43a;
+  --aec-left-ribbon-icons-color-4: #c4913a;
+  --aec-left-ribbon-icons-color-5: #c43a6d;
+  --aec-left-ribbon-icons-color-6: #913ac4;
+}
+
+:root .aec-left-ribbon-icons-from-theme {
+  --aec-left-ribbon-icons-color-1: var(--h1-color);
+  --aec-left-ribbon-icons-color-2: var(--h2-color);
+  --aec-left-ribbon-icons-color-3: var(--h3-color);
+  --aec-left-ribbon-icons-color-4: var(--h4-color);
+  --aec-left-ribbon-icons-color-5: var(--h5-color);
+  --aec-left-ribbon-icons-color-6: var(--h6-color);
+}
+
+
+/***********************************
+ * Ribbon action icons colors
+ ***********************************/
+
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
+	color: var(--aec-left-ribbon-icons-color-1);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
+	color: var(--aec-left-ribbon-icons-color-1);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+2) {
+	color: var(--aec-left-ribbon-icons-color-2);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+3) {
+	color: var(--aec-left-ribbon-icons-color-3);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+4) {
+	color: var(--aec-left-ribbon-icons-color-4);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+5) {
+	color: var(--aec-left-ribbon-icons-color-5);
+}
+.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+6) {
+	color: var(--aec-left-ribbon-icons-color-6);
+}
