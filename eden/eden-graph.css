@@ -1,0 +1,50 @@
+/**
+ * Obsidian graph view customisation
+ * A little bit limited, see
+ * https://demo-obsidian.owenyoung.com/Plugins/Graph%20view/
+ */
+
+.graph-view.color-fill,
+.theme-dark .graph-view.color-fill-tag,
+.theme-light .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-fill-attachment,
+.theme-light .graph-view.color-fill-attachment,
+.graph-view.color-arrow,
+.graph-view.color-circle,
+.graph-view.color-line,
+.graph-view.color-text,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight,
+.graph-view.color-fill-unresolved {}
+
+
+:root {
+  --graph-color-vert: #6DC43A;
+  --graph-color-jaune_bis: #704704;
+  --graph-color-jaune: #C4913A;
+  --graph-color-orange: #FF9D00;
+  --graph-color-orange_rouge: #E05916;
+  --graph-color-framboise: #C43A6D;
+  --graph-color-framboise_sombre: #8E2A4F;
+  --graph-color-violet: #7f6df2;
+  --graph-color-turquoise: #3AB1C4;
+  --graph-color-turquoise_sombre: #2A818E;
+}
+
+.graph-view.color-fill {
+  color: var(--graph-color-orange_rouge);
+}
+.theme-dark .graph-view.color-fill-tag {
+  color: var(--graph-color-turquoise_sombre);
+}
+.theme-dark .graph-view.color-fill-attachment {
+  color: var(--graph-color-framboise_sombre);
+}
+.graph-view.color-fill-highlight,
+.graph-view.color-circle {
+  color: var(--graph-color-violet);
+}
+.graph-view.color-line,
+.graph-view.color-arrow {
+  color: var(--graph-color-jaune_bis);
+}
