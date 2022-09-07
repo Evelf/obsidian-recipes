@@ -1,0 +1,211 @@
+/* @settings
+
+name: "'Arc-en-Ciel' for folder nav pane"
+id: evelf-aec-folder-nav
+settings:
+    -
+        id: aec-folder-nav-colors
+        title: Custom rainbow colors choices
+        type: heading
+        description: Define your own colors!
+        collapsed: true
+        level: 1
+    -
+        id: aec-folder-nav-color-1
+        title: First Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7f6df2'
+        default-light: '#7f6df2'
+    -
+        id: aec-folder-nav-color-2
+        title: Second Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3AB1C4'
+        default-light: '#3AB1C4'
+    -
+        id: aec-folder-nav-color-3
+        title: Third Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6DC43A'
+        default-light: '#6DC43A'
+    -
+        id: aec-folder-nav-color-4
+        title: Fourth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C4913A'
+        default-light: '#C4913A'
+    -
+        id: aec-folder-nav-color-5
+        title: Fifth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C43A6D'
+        default-light: '#C43A6D'
+    -
+        id: aec-folder-nav-color-6
+        title: Sixth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#913AC4'
+        default-light: '#913AC4'
+    - 
+        id: aec-folder-nav-color-7
+        title: Seventh Color and beyong
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7f6df2'
+        default-light: '#7f6df2'
+    -
+        id: aec-folder-nav-theme-colors
+        title: Get colors from theme
+        type: heading
+        description: Ignore custom colors
+        collapsed: true
+        level: 1
+    -
+        id: aec-folder-nav-from-theme
+        title: Get colors from h1->h6 titles
+        description: (Depending on your theme, this may not work)
+        type: class-toggle
+        default: false
+
+*/
+
+
+
+/************
+ * Layout
+ ************/
+
+/* align the collapse indicator (triangle)
+ * with the folders' left border
+ */
+.nav-folder-collapse-indicator {
+  margin: 0;
+  height: 10px;
+  width: 10px;
+  align-self: center;
+}
+
+/* align the folders' name with their border */
+.nav-folder-title {
+  padding-left: 0;
+}
+
+/* various adjustments */
+.nav-folder-children {
+  padding-left: 3px;
+}
+.nav-folder-children .nav-folder-children {
+  margin-left: 4px;
+}
+.nav-file-title {
+  padding-left: 0;
+  line-height: 1;
+}
+.nav-folder {
+  margin-left: 2px;
+}
+.nav-folder-title-content {
+  padding: 0 0 2px 2px;
+  line-height: 1;
+}
+.nav-file-title-content {
+  padding: 0;
+}
+
+.nav-folder-children .nav-folder-children {
+  border-width: 0 0 0 1px; /* top | right | bottom | left */
+  border-style: solid;
+}
+
+
+/************
+ * Colors
+ ************/
+
+:root {
+  --aec-folder-nav-color-1: #7f6df2;
+  --aec-folder-nav-color-2: #3ab1c4;
+  --aec-folder-nav-color-3: #6dc43a;
+  --aec-folder-nav-color-4: #c4913a;
+  --aec-folder-nav-color-5: #c43a6d;
+  --aec-folder-nav-color-6: #913ac4;
+  --aec-folder-nav-color-7: #7f6df2;
+}
+
+:root .aec-folder-nav-from-theme {
+  --aec-folder-nav-color-1: var(--h1-color);
+  --aec-folder-nav-color-2: var(--h2-color);
+  --aec-folder-nav-color-3: var(--h3-color);
+  --aec-folder-nav-color-4: var(--h4-color);
+  --aec-folder-nav-color-5: var(--h5-color);
+  --aec-folder-nav-color-6: var(--h6-color);
+  --aec-folder-nav-color-7: var(--h1-color);
+}
+
+.nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-1);
+}
+.nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-1);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-2);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-2);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-3);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-3);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-4);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-4);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-5);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-5);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-6);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-6);
+}
+
+/**
+ * Any folder deeper than that will use the first color
+ * It's possible to define deeper levels:
+ * copy-past the following definitions and add ".nav-folder-children" in front of them
+ */
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+  color: var(--aec-folder-nav-color-7);
+}
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+  border-color: var(--aec-folder-nav-color-7);
+}
+
