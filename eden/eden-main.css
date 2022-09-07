@@ -1,0 +1,12 @@
+
+/** D'où viennent ces classes avec des caractères bizarres ?
+ * en mode édition, l'élément incriminé est :
+ *    <div class="cm-editor ͼ1 ͼ2 ͼv">
+ * Est-ce que c'est un élément d'obsidian vanilla,
+ * ou bien c'est à cause d'un plugin mal fichu ??
+ */
+/* Pour pas couper les mots coréens à la ligne */
+body, .ͼv .cm-content, .ͼ1 .cm-content {
+  word-break: keep-all;
+}
+
