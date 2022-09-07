@@ -1,0 +1,62 @@
+/************************************
+ * Defines ribbon icon colors by
+ * position or aria-label
+ * aria-label can be customized with
+ * the "Commander" plugin
+ ************************************/
+
+:root {
+  --rainbow-color-1: #7f6df2;
+  --rainbow-color-2: #3AB1C4;
+  --rainbow-color-3: #6DC43A;
+  --rainbow-color-4: #C4913A;
+  --rainbow-color-5: #C43A6D;
+  --rainbow-color-6: #913AC4;
+}
+
+div.side-dock-ribbon-action.cmdr[aria-label="Accueil"] {
+	color: var(--rainbow-color-6);
+}
+div.side-dock-ribbon-action[aria-label="Une note au hasard"] {
+	color: var(--rainbow-color-1);
+}
+div.side-dock-ribbon-action[aria-label="Sélectionner une note"] {
+	color: var(--rainbow-color-2);
+}
+div.side-dock-ribbon-action[aria-label="Journal"] {
+	color: var(--rainbow-color-3);
+}
+div.side-dock-ribbon-action[aria-label="Nouveau mot coréen"],
+div.side-dock-ribbon-action[aria-label="Nouvelle structure grammaticale"] {
+	color: var(--rainbow-color-4);
+}
+div.side-dock-ribbon-action[aria-label="Voir le graphe"] {
+	color: var(--rainbow-color-5);
+}
+div.side-dock-ribbon-action[aria-label="Gestion des panels"] {
+	color: var(--rainbow-color-6);
+}
+
+/***********************************
+ * Right workspace tab icons colors
+ ***********************************/
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+1) {
+	color: var(--aec-rainbow-color-4);
+}
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+2) {
+	color: var(--aec-rainbow-color-3);
+}
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+3) {
+	color: var(--aec-rainbow-color-2);
+}
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+4) {
+	color: var(--aec-rainbow-color-1);
+}
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+5) {
+	color: var(--aec-rainbow-color-6);
+}
+.aec-right-tab-icons .mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+6) {
+	color: var(--aec-rainbow-color-5);
+}
+
+
