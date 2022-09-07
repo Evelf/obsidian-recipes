@@ -5,8 +5,61 @@
  * Est-ce que c'est un élément d'obsidian vanilla,
  * ou bien c'est à cause d'un plugin mal fichu ??
  */
+
 /* Pour pas couper les mots coréens à la ligne */
 body, .ͼv .cm-content, .ͼ1 .cm-content {
   word-break: keep-all;
 }
 
+:root {
+  --eden-rainbow-color-1: #7f6df2;
+  --eden-rainbow-color-2: #3AB1C4;
+  --eden-rainbow-color-3: #6DC43A;
+  --eden-rainbow-color-4: #C4913A;
+  --eden-rainbow-color-5: #C43A6D;
+  --eden-rainbow-color-6: #913AC4;
+  --eden-rainbow-color-7: #7f6df2;
+
+  --h1-color: var(--eden-rainbow-color-1);
+  --h2-color: var(--eden-rainbow-color-2);
+  --h3-color: var(--eden-rainbow-color-3);
+  --h4-color: var(--eden-rainbow-color-4);
+  --h5-color: var(--eden-rainbow-color-5);
+  --h6-color: var(--eden-rainbow-color-6);
+}
+
+
+/**************************************
+ * Fix typo in obsidian main CSS (??):
+ * h5 rendered color <- h6 color
+ **************************************/
+.markdown-rendered h5 {
+  color: var(--h5-color);
+}
+
+
+
+
+/**************************************
+ *  TRICKS
+ **************************************/
+/* This change the color and size of the file type label for non-md files ("JPEG", "PNG", ..) */
+.nav-file-tag {
+  color: var(--interactive-accent);
+  font-size: 7px;
+  margin: 0;
+}
+/* Top navbar: more compact */
+.nav-header {
+  padding: 0;
+}
+/* Top navbar: smaller buttons */
+.nav-header .nav-buttons-container .nav-action-button svg {
+  width: 15px;
+  height: 15px;
+}
+/* Top navbar: Squeaze buttons a little bit */
+.nav-header .nav-buttons-container .nav-action-button {
+  margin: 0 3px;
+  padding: 0;
+}
