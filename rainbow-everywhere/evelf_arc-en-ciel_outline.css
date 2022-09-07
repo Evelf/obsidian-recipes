@@ -1,3 +1,73 @@
+/* @settings
+
+name: "'Arc-en-Ciel' for note outline pane"
+id: evelf-aec-outline
+settings:
+    -
+        id: aec-custom-colors
+        title: Custom rainbow colors choices
+        type: heading
+        description: Define your own colors!
+        collapsed: true
+        level: 1
+    -
+        id: aec-note-outline-color-1
+        title: First Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#7f6df2'
+        default-light: '#7f6df2'
+    -
+        id: aec-note-outline-color-2
+        title: Second Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#3AB1C4'
+        default-light: '#3AB1C4'
+    -
+        id: aec-note-outline-color-3
+        title: Third Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#6DC43A'
+        default-light: '#6DC43A'
+    -
+        id: aec-note-outline-color-4
+        title: Fourth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C4913A'
+        default-light: '#C4913A'
+    -
+        id: aec-note-outline-color-5
+        title: Fifth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#C43A6D'
+        default-light: '#C43A6D'
+    -
+        id: aec-note-outline-color-6
+        title: Sixth Color
+        type: variable-themed-color
+        format: hex
+        default-dark: '#913AC4'
+        default-light: '#913AC4'
+    -
+        id: aec-note-outline-theme-colors
+        title: Get colors from theme
+        type: heading
+        description: Ignore custom colors
+        collapsed: true
+        level: 1
+    -
+        id: aec-note-outline-from-theme
+        title: Tries to get colors from h1->h2 titles
+        description: (Depending on your theme, this may not work)
+        type: class-toggle
+        default: false
+
+*/
+
 
 /** Layout */
 
@@ -28,69 +98,94 @@
   margin: 0;
   padding: 2px 0;
 }
-
-
-/** Colors */
-
-.outline .tree-item,
-.outline .tree-item .tree-item-inner,
-.outline .tree-item .collapse-icon {
-  color: var(--rainbow-color-1);
-}
-.outline .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-1);
-}
-
-.outline .tree-item .tree-item,
-.outline .tree-item .tree-item .tree-item-inner,
-.outline .tree-item .tree-item .collapse-icon {
-  color: var(--rainbow-color-2);
-}
-.outline .tree-item .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-2);
-}
-
-.outline .tree-item .tree-item .tree-item,
-.outline .tree-item .tree-item .tree-item .tree-item-inner,
-.outline .tree-item .tree-item .tree-item .collapse-icon {
-  color: var(--rainbow-color-3);
-}
-.outline .tree-item .tree-item .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-3);
-}
-
-.outline .tree-item .tree-item .tree-item .tree-item,
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
-.outline .tree-item .tree-item .tree-item .tree-item .collapse-icon {
-  color: var(--rainbow-color-4);
-}
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-4);
-}
-
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item,
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
-  color: var(--rainbow-color-5);
-}
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-5);
-}
-
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item,
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner,
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
-  color: var(--rainbow-color-6);
-}
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-self {
-  border-color: var(--rainbow-color-6);
-}
-
 .outline {
   margin-left: -7px;
 }
 
 
 
+/** Colors */
 
+:root {
+  --aec-note-outline-color-1: #7f6df2;
+  --aec-note-outline-color-2: #3ab1c4;
+  --aec-note-outline-color-3: #6dc43a;
+  --aec-note-outline-color-4: #c4913a;
+  --aec-note-outline-color-5: #c43a6d;
+  --aec-note-outline-color-6: #913ac4;
+}
 
+:root .aec-note-outline-from-theme {
+  --aec-note-outline-color-1: var(--h1-color);
+  --aec-note-outline-color-2: var(--h2-color);
+  --aec-note-outline-color-3: var(--h3-color);
+  --aec-note-outline-color-4: var(--h4-color);
+  --aec-note-outline-color-5: var(--h5-color);
+  --aec-note-outline-color-6: var(--h6-color);
+}
+
+.outline .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-1, var(--text-normal));
+}
+.outline .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-1, var(--text-muted));
+}
+.outline .tree-item.is-collapsed,
+.outline .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-1, var(--text-muted));
+}
+
+.outline .tree-item .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-2, var(--text-normal));
+}
+.outline .tree-item .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-2, var(--text-muted));
+}
+.outline .tree-item .tree-item.is-collapsed,
+.outline .tree-item .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-2, var(--text-muted));
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-3, var(--text-normal));
+}
+.outline .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-3, var(--text-muted));
+}
+.outline .tree-item .tree-item .tree-item.is-collapsed,
+.outline .tree-item .tree-item .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-3, var(--text-muted));
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-4, var(--text-normal));
+}
+.outline .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-4, var(--text-muted));
+}
+.outline .tree-item .tree-item .tree-item .tree-item.is-collapsed,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-4, var(--text-muted));
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-5, var(--text-normal));
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-5, var(--text-muted));
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item.is-collapsed,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-5, var(--text-muted));
+}
+
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
+  color: var(--aec-note-outline-color-6, var(--text-normal));
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+  color: var(--aec-note-outline-color-6, var(--text-muted));
+}
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item.is-collapsed,
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-children {
+  border-color: var(--aec-note-outline-color-6, var(--text-muted));
+}
