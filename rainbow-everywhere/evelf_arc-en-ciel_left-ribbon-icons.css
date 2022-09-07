@@ -61,7 +61,7 @@ settings:
         level: 1
     -
         id: aec-left-ribbon-icons-from-theme
-        title: Tries to get colors from h1->h2 titles
+        title: Get colors from h1->h6 titles
         description: (Depending on your theme, this may not work)
         type: class-toggle
         default: false
