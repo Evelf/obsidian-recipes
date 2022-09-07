@@ -22,11 +22,15 @@
 /*************************************************
  * callout qui se cachent lorsqu'ils sont embedded
  *  classe CSS : shy
+ * ne necessite PAS le plugin "Admonition"
  *************************************************/
-div.callout[data-callout="shy"] {
+.markdown-reading-view div.callout[data-callout="shy"] {
   border-width: 0;
 }
-.markdown-embed div[data-callout="shy"] {
+.markdown-reading-view div.callout[data-callout="shy"] div.callout-title {
+  display: none;
+}
+.markdown-reading-view .markdown-embed div[data-callout="shy"] {
   display: none;
 }
 
