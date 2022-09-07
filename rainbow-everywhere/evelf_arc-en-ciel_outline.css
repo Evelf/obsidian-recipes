@@ -1,10 +1,10 @@
 /* @settings
 
 name: "'Arc-en-Ciel' for note outline pane"
-id: evelf-aec-outline
+id: evelf-aec-note-outline
 settings:
     -
-        id: aec-custom-colors
+        id: aec-note-outline-colors
         title: Custom rainbow colors choices
         type: heading
         description: Define your own colors!
