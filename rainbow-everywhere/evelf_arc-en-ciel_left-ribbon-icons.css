@@ -61,7 +61,7 @@ settings:
         level: 1
     -
         id: aec-left-ribbon-icons-from-theme
-        title: Get colors from h1->h6 titles
+        title: Tries to get colors from h1->h2 titles
         description: (Depending on your theme, this may not work)
         type: class-toggle
         default: false
@@ -94,24 +94,24 @@ settings:
  * Ribbon action icons colors
  ***********************************/
 
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
 	color: var(--aec-left-ribbon-icons-color-1);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+1) {
 	color: var(--aec-left-ribbon-icons-color-1);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+2) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+2) {
 	color: var(--aec-left-ribbon-icons-color-2);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+3) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+3) {
 	color: var(--aec-left-ribbon-icons-color-3);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+4) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+4) {
 	color: var(--aec-left-ribbon-icons-color-4);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+5) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+5) {
 	color: var(--aec-left-ribbon-icons-color-5);
 }
-.aec-ribbon-action-icons .side-dock-actions div.side-dock-ribbon-action:nth-child(6n+6) {
+.side-dock-actions div.side-dock-ribbon-action:nth-child(6n+6) {
 	color: var(--aec-left-ribbon-icons-color-6);
 }
