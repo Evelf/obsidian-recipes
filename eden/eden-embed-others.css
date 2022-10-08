@@ -1,0 +1,41 @@
+
+.markdown-embed-title, .markdown-embed h1 {
+  display: none;
+}
+.markdown-source-view .markdown-embed, .markdown-source-view .file-embed {
+  border: inherit;
+  padding: 0 5px;
+  border-radius: 0;
+}
+.markdown-embed, .file-embed {
+  margin: 0;
+}
+.markdown-embed .markdown-preview-view {
+  padding: 0;
+}
+.markdown-embed-content {
+  max-height: none;
+}
+.markdown-embed {
+  background-color: var(--background-secondary);
+}
+
+/* No bottom margin for the last element of the embeded note */
+div.markdown-preview-section > div:last-child > * {
+    margin-block-end: 0.1em;
+}
+
+/* images in notes: default centered */
+.image-embed img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* remove vertical space added by markdown-preview-sizer */
+div.markdown-preview-sizer.markdown-preview-section {
+  min-height: unset !important;
+  padding-bottom: 0 !important;
+}
+

@@ -1,7 +1,15 @@
 :root {
   --grammar-card-color: #72D370;
-}
+  --grammar-card-border-color: var(--card-color);
 
+  --grammar-card-color: var(--carotte-creme);
+  --grammar-card-border-color: var(--carotte-creme-dark);
+
+  --voc-3-star-color: var(--rouge-pale);
+  --voc-2-star-color: var(--vieux-rose-pale);
+  --voc-1-star-color: var(--mauve-rose-pale);
+  --voc-0-star-color: var(--mauve-pale);
+}
 
 /*************************************************
  * Styles pour tous les éléments embed
@@ -19,24 +27,37 @@
 
 
 
+.callout .callout-title,
+.callout .callout-title .callout-title-inner {
+  font-weight: normal;
+}
+
 /*************************************************
  * callout qui se cachent lorsqu'ils sont embedded
  *  classe CSS : shy
  * ne necessite PAS le plugin "Admonition"
  *************************************************/
-.markdown-reading-view div.callout[data-callout="shy"] {
+.markdown-reading-view div.callout[data-callout="shy"],
+.popover div.callout[data-callout="shy"] {
   border-width: 0;
 }
-.markdown-reading-view div.callout[data-callout="shy"] div.callout-title {
+.markdown-reading-view div.callout[data-callout="shy"] div.callout-title,
+.popover div.callout[data-callout="shy"] div.callout-title {
   display: none;
 }
-.markdown-reading-view .markdown-embed div[data-callout="shy"] {
+.markdown-reading-view .markdown-embed div[data-callout="shy"],
+.popover .markdown-embed div[data-callout="shy"] {
   display: none;
 }
 
 
-
-
+/*************************************************
+ * Style pour cacher le titre h1 dans les embeded
+ *  embed-hide-h1
+ *************************************************/
+.markdown-embed .embed-hide-h1 h1 {
+  display: none;
+}
 
 /*************************************************
  * Styles pour toutes les cartes, classe CSS
@@ -50,13 +71,17 @@
   padding-bottom: 0;
   margin-bottom: 0;
 }
+/* This requires "Supercharged Links" plugin */
+a[data-link-cssclass*="card-note"  i] {
+    text-decoration: none !important;
+}
 
 /*************************************************
  * Couleurs pour les cartes avec classe CSS
- *  grammar-card
+ * korean-grammar et de type korean_grammar_card
  *************************************************/
 .markdown-embed div.korean-grammar {
-  border-color: var(--grammar-card-color);
+  border-color: var(--grammar-card-border-color);
 }
 .korean-grammar mark,
 .korean-grammar span.cm-highlight {
@@ -67,4 +92,41 @@
    override the values so the colors match exactly */
 a[data-link-note_type*="korean_grammar_card"  i] {
     color: var(--grammar-card-color) !important;
+    text-decoration: none !important;
+}
+
+/*************************************************
+ * Couleurs pour les cartes de type korean_voc_card
+ *  et avec classe CSS korean-voc
+ *************************************************/
+.markdown-embed div.korean-voc {
+  border-color: var(--grammar-card-border-color);
+}
+.korean-voc mark,
+.korean-voc span.cm-highlight {
+  background-color: transparent;
+  color: var(--grammar-card-color);
+}
+/* This requires "Supercharged Links" plugin, but it
+   override the values so the colors match exactly */
+a[data-link-note_type*="korean_voc_card"  i] {
+    color: var(--grammar-card-color) !important;
+    text-decoration: none !important;
+}
+
+/* En fonction du nombre d'étoiles */
+a[data-link-etoiles="3"] {
+  color: var(--voc-3-star-color) !important;
+}
+/* En fonction du nombre d'étoiles */
+a[data-link-etoiles="2"] {
+  color: var(--voc-2-star-color) !important;
+}
+/* En fonction du nombre d'étoiles */
+a[data-link-etoiles="1"] {
+  color: var(--voc-1-star-color) !important;
+}
+/* En fonction du nombre d'étoiles */
+a[data-link-etoiles="0"] {
+  color: var(--voc-0-star-color) !important;
 }

@@ -1,28 +1,3 @@
-
-.markdown-embed-title {
-  display: none;
-}
-.markdown-source-view .markdown-embed, .markdown-source-view .file-embed {
-  border: inherit;
-  padding: 0 5px;
-  border-radius: 0;
-}
-.markdown-embed, .file-embed {
-  margin: 0;
-}
-.markdown-embed .markdown-preview-view {
-  padding: 0;
-}
-.markdown-embed-content {
-  max-height: none;
-}
-
-/* remove vertical space added by markdown-preview-sizer */
-div.markdown-preview-sizer.markdown-preview-section {
-  min-height: unset !important;
-  padding-bottom: 0 !important;
-}
-
 /*
 .markdown-embed, .markdown-embed .markdown-prev-view {
   padding: 0 !important;
