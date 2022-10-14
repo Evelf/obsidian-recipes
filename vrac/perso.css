@@ -37,6 +37,13 @@ p + p {
   margin-block-end: 1em;
 }
 
+/* slightly unsafe list adjustment snippet */
+/* (Obsidian 1.0) */
+/* https://discord.com/channels/686053708261228577/702656734631821413/1030306351416623154 */
+div:not([class]) + div:not([class]) > :is(ol, ul) {
+    margin-top: -1em;
+}
+
 /* Moins d'espace en haut des fichiers */
 .markdown-rendered h1 {
   margin: 0 0 15px;
