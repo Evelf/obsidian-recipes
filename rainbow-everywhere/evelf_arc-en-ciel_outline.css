@@ -61,7 +61,7 @@ settings:
         level: 1
     -
         id: aec-note-outline-from-theme
-        title: Get colors from h1->h6 titles
+        title: Tries to get colors from h1->h2 titles
         description: (Depending on your theme, this may not work)
         type: class-toggle
         default: false
@@ -89,9 +89,8 @@ settings:
   padding: 0 0 0 6px;
 }
 .outline .tree-item .collapse-icon {
-  height: 10px;
   padding: 0;
-  margin: 0 -2px 0 -3px ;
+  margin: 0 3px 0 -4px;
 }
 .outline .tree-item .tree-item-inner {
   line-height: 0.9;
@@ -99,7 +98,7 @@ settings:
   padding: 2px 0;
 }
 .outline {
-  margin-left: -7px;
+  margin-left: -5px;
 }
 
 
@@ -127,7 +126,7 @@ settings:
 .outline .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-1, var(--text-normal));
 }
-.outline .tree-item .collapse-icon {
+.outline .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-1, var(--text-muted));
 }
 .outline .tree-item.is-collapsed,
@@ -138,7 +137,7 @@ settings:
 .outline .tree-item .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-2, var(--text-normal));
 }
-.outline .tree-item .tree-item .collapse-icon {
+.outline .tree-item .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-2, var(--text-muted));
 }
 .outline .tree-item .tree-item.is-collapsed,
@@ -149,7 +148,7 @@ settings:
 .outline .tree-item .tree-item .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-3, var(--text-normal));
 }
-.outline .tree-item .tree-item .tree-item .collapse-icon {
+.outline .tree-item .tree-item .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-3, var(--text-muted));
 }
 .outline .tree-item .tree-item .tree-item.is-collapsed,
@@ -160,7 +159,7 @@ settings:
 .outline .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-4, var(--text-normal));
 }
-.outline .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+.outline .tree-item .tree-item .tree-item .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-4, var(--text-muted));
 }
 .outline .tree-item .tree-item .tree-item .tree-item.is-collapsed,
@@ -171,7 +170,7 @@ settings:
 .outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-5, var(--text-normal));
 }
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-5, var(--text-muted));
 }
 .outline .tree-item .tree-item .tree-item .tree-item .tree-item.is-collapsed,
@@ -182,7 +181,7 @@ settings:
 .outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item-inner {
   color: var(--aec-note-outline-color-6, var(--text-normal));
 }
-.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon {
+.outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item .collapse-icon svg.svg-icon {
   color: var(--aec-note-outline-color-6, var(--text-muted));
 }
 .outline .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item.is-collapsed,
