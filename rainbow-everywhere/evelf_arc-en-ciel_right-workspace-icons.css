@@ -92,23 +92,21 @@ settings:
 /***********************************
  * Right workspace tab icons colors
  ***********************************/
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+1) {
+.mod-right-split .workspace-tab-header:nth-child(6n+1) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-1);
 }
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+2) {
+.mod-right-split .workspace-tab-header:nth-child(6n+2) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-2);
 }
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+3) {
+.mod-right-split .workspace-tab-header:nth-child(6n+3) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-3);
 }
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+4) {
+.mod-right-split .workspace-tab-header:nth-child(6n+4) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-4);
 }
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+5) {
+.mod-right-split .workspace-tab-header:nth-child(6n+5) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-5);
 }
-.mod-right-split .workspace-tab-container-inner div.workspace-tab-header:nth-child(6n+6) {
+.mod-right-split .workspace-tab-header:nth-child(6n+6) .workspace-tab-header-inner-icon {
 	color: var(--aec-right-workspace-icons-color-6);
 }
-
-
