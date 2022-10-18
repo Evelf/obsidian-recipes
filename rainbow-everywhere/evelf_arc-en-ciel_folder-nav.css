@@ -80,44 +80,31 @@ settings:
 /************
  * Layout
  ************/
-
-/* align the collapse indicator (triangle)
- * with the folders' left border
- */
-.nav-folder-collapse-indicator {
-  margin: 0;
-  height: 10px;
-  width: 10px;
-  align-self: center;
+.nav-files-container {
+  padding-left: 4px;
 }
-
-/* align the folders' name with their border */
-.nav-folder-title {
-  padding-left: 0;
-}
-
-/* various adjustments */
-.nav-folder-children {
-  padding-left: 3px;
-}
-.nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
   margin-left: 4px;
 }
-.nav-file-title {
-  padding-left: 0;
-  line-height: 1;
-}
 .nav-folder {
-  margin-left: 2px;
+  margin-bottom: 3px;
 }
-.nav-folder-title-content {
-  padding: 0 0 2px 2px;
-  line-height: 1;
+.nav-file-title, .nav-folder-title {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  --nav-item-padding: 0;
 }
-.nav-file-title-content {
-  padding: 0;
+.nav-file-title {
+  margin-top: 2px;
+}
+.nav-folder-collapse-indicator {
+  width: 13px;
 }
 
+
+/**
+ * Left border definition
+ */
 .nav-folder-children .nav-folder-children {
   border-width: 0 0 0 1px; /* top | right | bottom | left */
   border-style: solid;
@@ -149,50 +136,50 @@ settings:
 }
 
 .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-1);
 }
-.nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
   border-color: var(--aec-folder-nav-color-1);
 }
 
 .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-2);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-2);
 }
 
 .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-3);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-3);
 }
 
 .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-4);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-4);
 }
 
 .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-5);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-5);
 }
 
 .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-6);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-6);
 }
 
@@ -202,10 +189,9 @@ settings:
  * copy-past the following definitions and add ".nav-folder-children" in front of them
  */
 .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-collapse-indicator {
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .collapse-icon svg.svg-icon {
   color: var(--aec-folder-nav-color-7);
 }
-.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
+.nav-folder.mod-root .nav-folder > .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children {
   border-color: var(--aec-folder-nav-color-7);
 }
-
