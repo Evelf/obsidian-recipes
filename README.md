@@ -1,5 +1,13 @@
 # Evelf's obsidian solution log
 
+## 2024-07-29 Pre-theme CSS file
+
+Since 2022 I updated the snippets a few times, and made it into a theme which need some finishing touches before I can publish it.
+In the meantime, you can have a look to the current [theme.css](pre-theme/theme.css) file.
+
+![Pre-theme screenshot](pre-theme/theme-screenshot-2024-07-29.png)
+
+
 ## 2022-08-28 Rainbow file explorer
 
 ### Screenshot
